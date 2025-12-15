@@ -13,9 +13,8 @@ public class flipkartDemo {
 		WebDriver driver = new ChromeDriver();
 		  driver.manage().window().maximize();
 		  driver.get("https://www.flipkart.com/");
-		  WebElement SearchBox = driver.findElement(By.xpath("//input[@placeholder='Search for Products, Brands and More']"));
 		  String product1 = "Laptop";
-		  SearchBox.sendKeys(product1 + Keys.ENTER);
+		  driver.findElement(By.xpath("//input[@placeholder='Search for Products, Brands and More']")).sendKeys(product1 + Keys.ENTER);
 		  int n1 = 7;
 		  List<WebElement> productList1 = driver.findElements(By.xpath("(//div[@class='RG5Slk'])"));
 	        if (productList1.size() >= n1) {
@@ -27,10 +26,11 @@ public class flipkartDemo {
 	        } else {
 	            System.out.println("Error: Less than " + n1 + " products found.");
 	        }
-	      SearchBox.clear();
+	        driver.navigate().back();
 		  Thread.sleep(3000);
 		  String product2 = "TV";
-		  SearchBox.sendKeys(product2 + Keys.ENTER);
+		  driver.findElement(By.xpath("//input[@placeholder='Search for Products, Brands and More']")).sendKeys(product2 + Keys.ENTER);
+
 		  int n2 = 13;
 		  List<WebElement> productList2 = driver.findElements(By.xpath("(//div[@class='RG5Slk'])"));
 	        if (productList2.size() >= n2) {
@@ -42,10 +42,11 @@ public class flipkartDemo {
 	        } else {
 	            System.out.println("Error: Less than " + n2 + " products found.");
 	        }
-	      SearchBox.clear();
+	        driver.navigate().back();
 		  Thread.sleep(3000);
 		  String product3 = "smart phone";
-		  SearchBox.sendKeys(product3 + Keys.ENTER);
+		  driver.findElement(By.xpath("//input[@placeholder='Search for Products, Brands and More']")).sendKeys(product3 + Keys.ENTER);
+
 		  int n3 = 2;
 		  List<WebElement> productList3 = driver.findElements(By.xpath("(//div[@class='RG5Slk'])"));
 	        if (productList3.size() >= n3) {
