@@ -1,0 +1,6 @@
+TestNG has several advantages over JUnit that make it more suitable for advanced test automation. One of the major benefits of TestNG is its flexible annotation system, which provides better control over the test execution flow through annotations such as BeforeSuite, AfterSuite, BeforeTest, and AfterTest. It also supports data-driven testing using DataProvider, allowing the same test case to run with multiple sets of input data.
+
+Another advantage of TestNG is test prioritization and dependency management. Test cases can be executed in a specific order using priorities, and one test can depend on another. TestNG also allows grouping of test cases like smoke, regression, or sanity tests, which makes selective execution easier.
+
+In addition, TestNG supports parallel execution, helping to reduce overall execution time. The use of testng.xml gives more control over test execution without changing the source code. TestNG also provides better default reports and supports parameterization through XML files. Overall, TestNG is more flexible, scalable, and better suited for building robust automation frameworks than JUnit.
+
